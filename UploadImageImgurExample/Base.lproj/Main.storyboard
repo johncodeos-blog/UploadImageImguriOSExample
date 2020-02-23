@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8Zt-Zz-adw">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--UploadImageImgurExample-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UploadImageImgurExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="Fk8-yJ-B30">
+                                <rect key="frame" x="79" y="266" width="256" height="242"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aJo-hJ-YBh">
+                                        <rect key="frame" x="0.0" y="0.0" width="256" height="144"/>
+                                        <color key="backgroundColor" red="0.73725490199999999" green="0.12941176469999999" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="256" id="6jz-Oz-vNp"/>
+                                            <constraint firstAttribute="width" secondItem="aJo-hJ-YBh" secondAttribute="height" multiplier="16:9" id="LN3-2J-PzZ"/>
+                                            <constraint firstAttribute="height" constant="144" id="gYR-Ag-k9n"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bjh-WZ-mEC">
+                                        <rect key="frame" x="0.0" y="155" width="256" height="38"/>
+                                        <color key="backgroundColor" red="0.73725490199999999" green="0.1333333333" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                        <state key="normal" title="SELECT IMAGE">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="selectImageButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ON0-7F-etW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWD-Ah-sji">
+                                        <rect key="frame" x="0.0" y="204" width="256" height="38"/>
+                                        <color key="backgroundColor" red="0.73725490199999999" green="0.1333333333" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                        <state key="normal" title="UPLOAD IMAGE TO IMGUR">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="uploadImageButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pQe-A0-ANt"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.61960784310000006" green="0.10980392160000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Fk8-yJ-B30" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="c1c-yL-eVc"/>
+                            <constraint firstItem="Fk8-yJ-B30" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="eer-Yl-Ici"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="UploadImageImgurExample" id="dOX-Ds-t7x"/>
+                    <connections>
+                        <outlet property="selectImageButton" destination="Bjh-WZ-mEC" id="HSs-Ra-cci"/>
+                        <outlet property="selectedImageImageView" destination="aJo-hJ-YBh" id="A9w-3i-imE"/>
+                        <outlet property="uploadImageButton" destination="bWD-Ah-sji" id="8un-U4-VBt"/>
+                        <segue destination="hyF-ST-kb5" kind="show" identifier="detailsseg" id="a6z-Gd-GBn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="138.61607142857142"/>
+        </scene>
+        <!--Details View Controller-->
+        <scene sceneID="559-TH-gOY">
+            <objects>
+                <viewController id="hyF-ST-kb5" customClass="DetailsViewController" customModule="UploadImageImgurExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="O8m-Pn-F65">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="imgur URL" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="E5A-Uw-wJ5">
+                                <rect key="frame" x="20" y="387.5" width="374" height="33"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="crv-T7-8WP"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.61960784310000006" green="0.10980392160000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="E5A-Uw-wJ5" firstAttribute="leading" secondItem="Cob-mY-pb3" secondAttribute="leading" constant="20" id="GPd-3i-iLT"/>
+                            <constraint firstItem="Cob-mY-pb3" firstAttribute="trailing" secondItem="E5A-Uw-wJ5" secondAttribute="trailing" constant="20" id="YZj-p0-ehV"/>
+                            <constraint firstItem="E5A-Uw-wJ5" firstAttribute="centerX" secondItem="Cob-mY-pb3" secondAttribute="centerX" id="lB6-ky-Cez"/>
+                            <constraint firstItem="E5A-Uw-wJ5" firstAttribute="centerY" secondItem="O8m-Pn-F65" secondAttribute="centerY" id="txf-wc-JRZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Cob-mY-pb3"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lkq-YG-f4h"/>
+                    <connections>
+                        <outlet property="imgurURLTextView" destination="E5A-Uw-wJ5" id="W9W-W5-ffA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FLn-Wt-yZm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1986.9565217391305" y="138.61607142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mas-8U-kq3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8Zt-Zz-adw" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="o00-Td-myk">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.73725490199999999" green="0.1333333333" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="rdw-Yn-U4H"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="irp-of-6DO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+</document>
